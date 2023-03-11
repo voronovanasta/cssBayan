@@ -23,31 +23,62 @@ body {
 }
 
 .container {
+    color: blue;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    max-width: 80vh;
+    max-width: 50%;
     margin: 0 auto;
 }
 
 .acc-btn {
-    
     margin: 0 auto;
     border-radius: 4px;
     background-color: #ffffff;
     border-top: 1px solid #D9D9D9;
     text-align: left;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
 }
 
 .acc-btn p {
-    height: 3vw;
+    height: 100%;
     width: 100%;
-
 }
 
+.container:hover .title-content {
+    color: black;
+}
+
+
+.container:hover .acc-btn .icon {
+    display: block;
+}
+
+.acc-btn:has(input:checked):hover .icon {
+    display: block;
+}
+
+.acc-btn:hover .image {
+    height: auto;
+    scale: 80%;
+    transition: 0.3s linear;
+}
+
+.acc-btn:hover .icon {
+    display: block;
+    transform: rotate(90deg);
+    transition: 0.1s linear;
+}
+
+
+
 .icon {
-    
+    display: none;
     background: url(./assets/xmark.svg);
     background-size: cover;
     height: 0.8rem;
@@ -64,20 +95,36 @@ body {
     scale: 0;
 }
 
+
 .acc-btn:has(input:checked) .image {
     height: auto;
     scale: 80%;
-    transition: 0.7s linear;
+}
+
+.acc-btn:has(input:checked) .title-content {
+    color: black;
+}
+
+.acc-btn:has(input:checked) .icon {
+    display: none;
+    transform: rotate(90deg);
+    transition: 0.1s linear;
+}
+
+.acc-btn:has(input:checked):hover .image {
+    height: auto;
+    scale: 80%;
+    transition: 1s linear;
 }
 
 h1 {
-    align-self: flex-start;
+    align-self: center;
 }
 
 p {
     margin: 0;
     padding: 0;
-    padding-top: 0.6rem;
+    padding: 0.6rem;
 }
 
 .title-content {
@@ -85,5 +132,14 @@ p {
     align-items: center;
 }
 
+.acc-btn:active {
+    opacity: 50%;
+
+}
+
+.acc-btn:active .title-content{
+    color: blue;
+
+}
 
 
