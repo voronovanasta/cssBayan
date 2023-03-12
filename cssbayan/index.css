@@ -24,16 +24,18 @@ html {
 body {
     font-family: 'Roboto';
     font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40vw;
 }
 
 .container {
     color: blue;
-    display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 40vw;
     padding: 0;
-    margin: 0 auto;
 }
 
 .acc-btn {
@@ -55,14 +57,11 @@ label {
 
 .icon {
     display: none;
+    transform: rotate(45deg);
+    background-image: url(./assets/xmark.svg);
+    background-size: cover;
     height: 0.8rem;
     width: 0.8rem;
-    transform: rotate(45deg);
-    -webkit-mask: url(./assets/xmark.svg) no-repeat 100% 100%;
-    mask: url(./assets/xmark.svg) no-repeat 100% 100%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: black;
 
 }
 
@@ -146,9 +145,15 @@ p {
 
 .acc-btn:active .icon{
     display: block;
+    background-image: url(./assets/xmark.svg);
+    background-size: cover;
+    height: 0.8rem;
+    width: 0.8rem;
+    /*-webkit-mask: url(./assets/xmark.svg) no-repeat 100% 100%;
     mask: url(./assets/xmark.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: blue;
+    background-color: blue;*/
     transition: 0.1s linear;
 
 }
@@ -162,7 +167,7 @@ p {
 
     .icon {
         display: block;
-        background: url(./assets/xmark.svg);
+        background-image: url(./assets/xmark.svg);
         background-size: cover;
         height: 0.8rem;
         width: 0.8rem;
@@ -174,12 +179,6 @@ p {
         scale: 70%;
         transition: 0.5s linear;
     }
-}
-
-footer {
-    width: 40vw;
-    padding: 0;
-    margin: 0 auto;
 }
 
 .link {
@@ -208,5 +207,4 @@ footer {
     padding-right: 0.6rem;
   }
 
- 
 
