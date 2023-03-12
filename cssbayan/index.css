@@ -72,6 +72,7 @@ label {
     align-items: center;
     height: 0;
     scale: 0;
+    opacity: 0%;
 }
 
 img {
@@ -81,6 +82,7 @@ img {
 .acc-btn:has(input:checked) .image {
     height: auto;
     scale: 70%;
+    opacity: 100%;
 }
 
 .acc-btn:has(input:checked) .title-content {
@@ -129,7 +131,8 @@ p {
     .acc-btn:hover .image {
         height: auto;
         scale: 70%;
-        transition: 0.3s linear;
+        opacity: 100%;
+        transition: all 0.5s linear;
     }
 
     .acc-btn:hover .icon {
@@ -155,6 +158,8 @@ p {
 }
 
 @media (hover: none) and (pointer: coarse) {
+
+
     .acc-btn:has(input:checked) .icon {
         display: block;
         transform: rotate(90deg);
@@ -174,6 +179,14 @@ p {
         height: auto;
         scale: 70%;
         transition: 0.5s linear;
+    }
+
+    .container {
+        margin: 0 3rem;
+    }
+
+    .acc-btn:active .title-content{
+        color: blue;
     }
 }
 
